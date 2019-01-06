@@ -1,28 +1,44 @@
-﻿define s = Character('Infel', color="#0000ff")
+﻿define s = Character('Infel', color="#0000ff", namebox="gui/textbox.png")
 define m = Character('Me', color="#c8c8ff")
+define l = Character('Lyner', color="#c04030")
+define hmns = Character('Infel', what_font="fonts/hymmnos.ttf")
 
 label start:
 
-    scene bg meadow
-
-    "After a short while, we reach the meadows just outside the neighborhood where we both live."
-
-    "It's a scenic view I've grown used to. Autumn is especially beautiful here."
-
-    "When we were children, we played in these meadows a lot, so they're full of memories."
-
-    m "Hey... Umm..."
-
+    scene bg stonehenge at truecenter
+    
+    show infel flustered at center
+    
+    s "Does it make a difference if it's a man or a woman? I hate bothersome men."
+    
+    show infel smirk at right
+    
+    s "Kool koal is krazy"
+    
     show infel frown at right
-
-    s "The IPDs killed Nenesha. I'll kill them all!"
-
-    "I'll ask her...!"
-
-    m "Ummm... Will you..."
-
-    m "Will you be my artist for a visual novel?"
-
-    show saki surprised at right
-
-    "Silence."
+    
+    l "I'm a big dummy"
+    
+    show infel embarrassed at right
+    
+    hmns "Was yea ra chs hymmnos yor"
+    
+    show infel snarl at right
+    
+    "snarl"
+    
+    show infel grin at right
+    
+    "grin"
+    
+    show infel unamused at right
+    
+    "unamused"
+    
+    show infel flustered at right
+    
+    "flustered"
+    
+    show infel wail at right
+    
+    "wail"

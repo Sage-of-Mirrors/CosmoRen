@@ -55,10 +55,14 @@ define gui.interface_text_color = '#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "fonts/Goodwill_Y2011_M10_D11.otf"
+
+define gui.dialogue_text_outlines = [ (0, "#00000080", 2, 2) ]
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "fonts/Goodwill_Y2011_M10_D11.otf"
+
+define gui.name_text_outlines = [ (2, "#ffffffff", 0, 0) ]
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "DejaVuSans.ttf"
@@ -67,7 +71,7 @@ define gui.interface_text_font = "DejaVuSans.ttf"
 define gui.text_size = 22
 
 ## The size of character names.
-define gui.name_text_size = 30
+define gui.name_text_size = 35
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 22
@@ -104,8 +108,8 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 230
-define gui.name_ypos = 26
+define gui.name_xpos = 225
+define gui.name_ypos = 23
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
