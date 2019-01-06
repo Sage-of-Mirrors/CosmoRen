@@ -3,3 +3,4 @@ traceback.txt
 *.rpyc
 *.rpyb
 game/saves/persistent
+*.save
