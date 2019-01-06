@@ -1,9 +1,10 @@
-﻿define s = Character('Infel', color="#0000ff", namebox="gui/textbox.png")
+﻿# Keeping this here for posterity. See example.rpy.
+
+define s = Character('Infel', color="#0000ff", namebox="gui/textbox.png")
 define m = Character('Me', color="#c8c8ff")
 define l = Character('Lyner', color="#c04030")
-define hmns = Character('Infel', what_font="fonts/hymmnos.ttf")
 
-label start:
+label start_orig:
 
     scene bg stonehenge at truecenter
     
