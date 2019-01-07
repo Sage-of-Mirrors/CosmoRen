@@ -11,13 +11,19 @@ define hmns = Character(what_font="fonts/hymmnos.ttf")
 # Ren'Py's execution begins at the start label
 label start:
     
+    call screen map("example_map")
+    
+    pause
+    
     # Sets the background image. The image name is "bg stonehenge".
     # truecenter is the center of the screen both horizontally and vertically.
     scene bg stonehenge at truecenter
     
+
+    
     # Displays Infel's smirking portrait.
     # Center is the center of the screen horizontally.
-    show infel smirk at center
+    show infel snarl at center
     
     infel "Alright, alright, good job. That's it. You can now go deeper into Cloche's mind."
     croix "Yeah."
@@ -67,3 +73,9 @@ label start:
     
     # This signals to Ren'Py that the game has ended
     return
+    
+label test_1:
+    "test_1"
+    
+label test_2:
+    "test_2"

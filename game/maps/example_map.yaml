@@ -1,0 +1,29 @@
+example_map:
+    image: map/example_map_1.png
+    music: "example_map_track_1.mp3"
+    locations:
+        coal_lodge:
+            x_pos: 710
+            y_pos: 240
+            label: "coal_lodge_start"
+            starred_flag: "coal_lodge_star"
+        mushroom:
+            x_pos: 1040
+            y_pos: 160
+            label: "coal_lodge_start"
+            starred_flag: "coal_lodge_star"
+        meadow:
+            x_pos: 800
+            y_pos: 475
+            label: "coal_lodge_start"
+            starred_flag: "coal_lodge_star"
+        stonehenge:
+            x_pos: 226
+            y_pos: 286
+            label: "coal_lodge_start"
+            starred_flag: "coal_lodge_star"
+        village:
+            x_pos: 470
+            y_pos: 485
+            label: "coal_lodge_start"
+            starred_flag: "coal_lodge_star"

@@ -1513,3 +1513,20 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 600
+
+## Map screen ###############################################################
+##
+## The map screen shows the player all of the locations that are available to
+## go to.
+
+init python:
+    import yaml
+
+    f = open (renpy.loader.transfn('./maps/example_map.yaml'))
+    maps = yaml.safe_load (f)
+
+screen map(map_name):
+    add maps[map_name]['image']
+        
+    for name in maps[map_name]['locations']:
+        add "location_button.png" xpos maps[map_name]['locations'][name]['x_pos'] ypos maps[map_name]['locations'][name]['y_pos']
