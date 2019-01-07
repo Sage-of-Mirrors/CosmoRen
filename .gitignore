@@ -4,3 +4,4 @@ traceback.txt
 *.rpyb
 game/saves/persistent
 *.save
+errors.txt
