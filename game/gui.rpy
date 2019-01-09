@@ -9,7 +9,7 @@ init offset = -2
 ## Calling gui.init resets the styles to sensible default values, and sets the
 ## width and height of the game.
 init python:
-    gui.init(1280, 720)
+    gui.init(640, 480)
 
 
 
@@ -136,7 +136,7 @@ define gui.dialogue_xpos = 165
 define gui.dialogue_ypos = 75
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 1050
+define gui.dialogue_width = 450
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -436,7 +436,7 @@ init python:
         gui.label_text_size = 34
 
         ## Adjust the location of the textbox.
-        gui.textbox_height = 240
+        gui.textbox_height = 200
         gui.name_xpos = 80
         gui.text_xpos = 90
         gui.text_width = 1100

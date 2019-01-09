@@ -1521,12 +1521,45 @@ style slider_pref_slider:
 
 init python:
     import yaml
-
+    
+    maps = {} # A dictionary of the maps that the game uses
+    
     f = open (renpy.loader.transfn('./maps/example_map.yaml'))
     maps = yaml.safe_load (f)
+    
+image location_button:
+    on idle:
+        "location_button_idle.png"
+    on hover:
+        "location_button_hovered.png"
+    on selected:
+        "location_button_selected.png"
 
 screen map(map_name):
-    add maps[map_name]['image']
-        
-    for name in maps[map_name]['locations']:
-        add "location_button.png" xpos maps[map_name]['locations'][name]['x_pos'] ypos maps[map_name]['locations'][name]['y_pos']
+    frame:
+        add maps[map_name]['image'] at truecenter
+            
+        for name in maps[map_name]['locations']:
+            button:
+                xysize (16, 16) # The button graphic is 16x16 pixels
+                add "location_button"
+                xpos maps[map_name]['locations'][name]['x_pos'] ypos maps[map_name]['locations'][name]['y_pos']
+                action [Hide('map', transition=Dissolve(0.5)), Jump(maps[map_name]['locations'][name]['label'])]
+                tooltip {"text": maps[map_name]['locations'][name]['display_name'],
+                         "x_pos": maps[map_name]['locations'][name]['x_pos'],
+                         "y_pos": maps[map_name]['locations'][name]['y_pos']
+                         }
+                
+            $ tooltip = GetTooltip()
+
+            if tooltip:
+                python:
+                    # Get the text width so we can properly size the fixed element
+                    text_width = int(Text(tooltip['text']).size()[0])
+                fixed:
+                    xysize (text_width, 500)
+                    xcenter tooltip['x_pos'] + 16
+                    ypos tooltip['y_pos'] - 20
+                    xalign 0.5
+                    text "[tooltip[text]]"
+                
