@@ -1,11 +1,15 @@
+define cloche = Character('Cloche', color="#0020ff")
+
 label stonehenge_start:
+    play music "music/Cloche Theme.mp3"
+    
     # Sets the background image. The image name is "bg stonehenge".
     # truecenter is the center of the screen both horizontally and vertically.
     scene bg stonehenge sm at truecenter with fade
 
     # Displays Infel's smirking portrait.
     # Center is the center of the screen horizontally.
-    show infel smirk sm at center with dissolve
+    show infel smirk at center with dissolve
     
     infel "Alright, alright, good job. That's it. You can now go deeper into Cloche's mind."
     croix "Yeah."
@@ -48,7 +52,7 @@ label stonehenge_start:
     scene bg black at truecenter with fade
     
     # This text shows up in-game as Hymmnos because of the character.
-    hmns "Ma num ra chs pic wasara mea,"
+    text "Ma num ra chs pic wasara mea,"
     hmns "en fwal sec mea."
     hmns "Was yea ra chs mea yor en fwal"
     hmns "en chs hymme."
