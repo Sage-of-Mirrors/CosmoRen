@@ -1,0 +1,28 @@
+aurica_1:
+    image: map/aurica_1_640.png
+    music: "example_map_track_1.mp3"
+    locations:
+        stonehenge:
+            x_pos: 130
+            y_pos: 250
+            display_name: "Stonehenge"
+            label: "stonehenge_start"
+            starred_flag: "stonehenge_star"
+        boundary_gate:
+            x_pos: 268
+            y_pos: 215
+            display_name: "Boundary Gate"
+            label: "tower_of_life_start"
+            starred_flag: "boundary_gate_star"
+        village:
+            x_pos: 330
+            y_pos: 360
+            display_name: "Town of Dusk"
+            label: "village_start"
+            starred_flag: "village_star"
+        inn:
+            x_pos: 425
+            y_pos: 365
+            display_name: "Cave Inn"
+            label: "inn_start"
+            starred_flag: "inn_star"

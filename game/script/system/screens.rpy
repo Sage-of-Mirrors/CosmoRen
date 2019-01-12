@@ -1524,7 +1524,7 @@ init python:
     
     maps = {} # A dictionary of the maps that the game uses
     
-    f = open (renpy.loader.transfn('./maps/example_map.yaml'))
+    f = open (renpy.loader.transfn('./maps/aurica_1.yaml'))
     maps = yaml.safe_load (f)
     
 image location_button:
