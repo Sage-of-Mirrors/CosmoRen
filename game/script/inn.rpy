@@ -19,6 +19,7 @@ label inn_none:
     jump map
     
 label inn_jack_conversation:
+    show jack disinterest at center with dissolve
     jack "Hey, you're..."
     
     lyner "You're Jack! I didn't think you'd be here."
@@ -27,11 +28,15 @@ label inn_jack_conversation:
     
     lyner "Oh? Then why are you here?"
     
+    show jack yelling at center
+    
     jack "That's my own business! Why the hell do I have to tell you? Huh? Why?"
     
     lyner "Uh, I don't need to know that badly! Hahaha..."
     lyner "(Jack is really scary today!)"
     lyner "(...Oh yeah. This Jack is the image of how Aurica sees him. So, Jack is a scary person to Aurica, I guess...)"
+    
+    show jack disinterest at center
     
     jack "I mean, why the hell do I have to be in the world of this little girl?"
     jack "Ugh... I'd rather be in the Cosmosphere of a gorgeous lady, like Miss Claire. Staying here is lame!"
@@ -40,9 +45,13 @@ label inn_jack_conversation:
     
     $ inn_saw_jack_conversation = True
     
+    hide jack disinterest with dissolve
+    
     jump map
     
 label inn_aurica_conversation:
+    show aurica std gasp at center_side
+    
     aurica_std "Y-you!?"
     
     lyner "I'm Lyner Barsett. I came here so that you can craft a song."
@@ -52,15 +61,21 @@ label inn_aurica_conversation:
     lyner "I don't think so... besides, this is your world. You should be able to create anything you want."
     
     aurica_std "It's not that easy for me. I can't even save my own village..."
+    show aurica std grimace at center_side
     aurica_std "This village has been destroyed many times by the Fire Demon. Radolf, who lives in this village, thinks I'm summoning the Fire Demon."
     
     lyner "Wh-what? Why would he think that?"
     
+    show aurica std sad at center_side
+    
     aurica_std "Unfortunately, he's probably right. This village has been burned down many times in the past... because of me."
+    show aurica std smile sad at center_side
     aurica_std "Radolf always rebuilds the village. He isn't friendly, but he's got a big heart."
     
     lyner "Huh? That sounds strange... Isn't this your world? Why can't you restore the village?"
     lyner "You should be able to do anything... including stopping that demon..."
+    
+    show aurica std gasp at center_side
     
     aurica_std "I can't do that! I would only destroy this village."
     
@@ -75,9 +90,13 @@ label inn_aurica_conversation:
     
     lyner "This is gonna be tough... I guess we have no choice but to defeat it. Can you craft Song Magic to defeat it?"
     
+    show aurica std grimace at center_side
+    
     aurica_std "No. I don't want to make anything. People always laught at my creations..."
     
     lyner "...laugh? Why?"
+    
+    show aurica std sad at center_side
     
     aurica_std "It's because I'm stupid. I can only create strange things, and I'm so weak..."
     
@@ -86,6 +105,8 @@ label inn_aurica_conversation:
     aurica_std "...I'm really weak, though."
     
     lyner "I don't care."
+    
+    show aurica std gasp at center_side
     
     aurica_std "You'll laugh at me."
     
@@ -96,12 +117,31 @@ label inn_aurica_conversation:
     lyner "Don't worry about a thing! Just trust me and make something!"
     
     aurica_std "Okay..."
+    
+    hide aurica std gasp with dissolve
+    
     aurica_std "I'll do it..."
     aurica_std "Huh!!"
     
+    show bg white at truecenter with dissolve
+    
+    show fireball wait at right_side_2
+    
+    show bg elemia inn at truecenter with dissolve
+    
     lyner "You did it!"
+
+    hide fireball wait with dissolve
+    
+    show aurica std sad at center_side with dissolve
     
     aurica_std "I'm sorry. I can only make useless things..."
+    
+    hide aurica std sad with dissolve
+    
+    show aurica std smile at left_side
+    
+    show fireball wait at right_side
     
     fireball "Excuse you! You crafted me! You can't call me useless!"
     
@@ -109,10 +149,14 @@ label inn_aurica_conversation:
     
     fireball "Why are you surprised? You crafted me, thinking it would be cute if I could talk."
     
+    show aurica std smile sincere at left_side
+    
     aurica_std "I did... but I didn't expect it to really happen."
     
     lyner "Great! See, you can craft properly. I can't do this. You need to be more confident."
     lyner "This is your world. You can craft anything if you believe in yourself."
+    
+    show aurica std sad at center_side
     
     aurica_std "...Y-yes. But I can only craft silly magic."
     
@@ -121,10 +165,17 @@ label inn_aurica_conversation:
     lyner "That fire ball is right. I think he'll be useful."
     lyner "We can grill meat with this thing. Powerful isn't always a good thing, right? We can't grill meat with a bomb."
     
+    show aurica std smile sincere at left_side
+    
     aurica_std "You're right."
     
     fireball "Wait a minute! I'm only good for grilling meat!? What an insult..."
     
     $ inn_saw_aurica_conversation = True
+    
+    hide aurica std sincere with dissolve
+    hide fireball wait with dissolve
+    
+    scene bg black with dissolve
     
     jump map

@@ -35,6 +35,8 @@ label stonehenge_intro:
     
     lyner "Hey! Oww!"
     
+    show don leon angry at center_side with Dissolve(0.2)
+    
     unk_leon "Scoundrel! Who do you think you are, barging in here without permission? Identify yourself!"
     
     lyner "Wait, who are you? Oww!"
@@ -44,6 +46,8 @@ label stonehenge_intro:
     unk_leon "Scoundrel! How rude! You should give your name before requesting mine!"
     
     lyner "Okay, okay. I'm Lyner Barsett."
+    
+    show don leon neutral at center_side
     
     unk_leon "And I am Don Leon, the royal knight of Aurica's mind."
     
@@ -55,17 +59,27 @@ label stonehenge_intro:
     
     # screen shake
     
+    show don leon angry at center_side
+    
     leon "How dare you! Aurica gave me my name! I demand satisfaction... or an apology..."
     
     lyner "Okay, I admit I was wrong. I'm sorry."
+    
+    show don leon neutral at center_side
     
     leon "I shall forgive you this once. So, what business do you have in Aurica's world?"
     
     lyner "I'm here for Song Magic."
     
+    show don leon surprised at center_side
+    
     leon "Song Magic, you say? Aurica would never craft Song Magic with a weirdo like you!"
     
+    show don leon neutral at center_side
+    
     leon "But, you have come all this way. Know that I do not trust you..."
+    
+    show don leon angry at center_side
     
     leon "I shall be keeping a close eye on you. That, you must never forget!"
     
@@ -75,9 +89,13 @@ label stonehenge_intro:
     
     $ stonehenge_saw_intro = True
     
+    hide don leon angry with dissolve
+    
     jump map
     
 label stonehenge_explanation:
+    show don leon neutral at center_side with dissolve
+    
     leon "Aurica isn't here. Or are you going home already?"
     
     lyner "That's not it... I was a little curious when I came here. What are these ruins?"
@@ -86,10 +104,15 @@ label stonehenge_explanation:
     
     lyner "I... I see..."
     
+    show don leon angry at center_side
+    
     leon "Indeed. When Aurica advances from this world, she borrows powers from this Stonehenge."
+    show don leon neutral at center_side
     leon "You will understand when the time comes, if you're able to support Aurica and cause the Paradigm Shift to occur."
     
     $ stonehenge_saw_stonehenge_explanation = True
+    
+    hide don leon neutral with dissolve
     
     jump map
     

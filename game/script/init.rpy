@@ -14,7 +14,14 @@ transform right_side_2:
     yalign 0.5
     xpos 200
     
-default stonehenge_saw_intro = True
+transform center_side:
+    yalign 0.75
+    xpos 240
+    
+transform mirror:
+    xzoom -1.0
+    
+default stonehenge_saw_intro = False
 default stonehenge_paradigm_shift_occurred = False
 default stonehenge_saw_stonehenge_explanation = False
 
